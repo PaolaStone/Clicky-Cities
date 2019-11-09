@@ -1,22 +1,45 @@
+.jumbotron {
+  width:100%;
+  margin-bottom: 10px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
+.container {
+  /* display: block; */
+}
 .btn {
   background: #fff;
   /* border-radius: 12px; */
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   justify-content: center;
   margin: 15px;
-  display: inline; 
-  /* transition: all 2s; */
-}
+ }
 
 .btn>.img-container {
   overflow: hidden;
   text-align: center;
   background: white;
   justify-content: center;  
-  margin: 10px;   
+  margin: 5px;   
 }
 
 .btn>.img-container>img {
-  width: 200px;  
-  height: 200px;
+  width: 150px;  
+  height: 150px;
+}
+
+.middle {
+  
+  font-size: xxx-large;
+}
+.score {
+  /* float: right; */
+  text-align: right;
+  font-size: xx-large;
+}
+
+.left {
+  
+  font-size: xxx-large;
 }
