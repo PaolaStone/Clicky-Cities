@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import CityCard from "./components/CityCard";
 import Wrapper from "./components/Wrapper";
+import NavBar from "./components/NavBar";
 import Title from "./components/Title";
 import cities from "./cities.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+ 
   state = {
     cities
   };
@@ -13,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <NavBar/>
         <Title/>
         <div className="container">
         <div className="row">
