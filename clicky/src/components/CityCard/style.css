@@ -1,0 +1,22 @@
+.btn {
+  background: #fff;
+  /* border-radius: 12px; */
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  justify-content: center;
+  margin: 15px;
+  display: inline; 
+  /* transition: all 2s; */
+}
+
+.btn>.img-container {
+  overflow: hidden;
+  text-align: center;
+  background: white;
+  justify-content: center;  
+  margin: 10px;   
+}
+
+.btn>.img-container>img {
+  width: 200px;  
+  height: 200px;
+}
