@@ -9,19 +9,24 @@ class App extends Component {
   state = {
     cities
   };
-  
+
   render() {
     return (
       <Wrapper>
         <Title/>
-     
-        {this.state.cities.map(city => (
-          <CityCard
-            id={city.id}
-            key={city.id}
-            image={city.image}
-          />
-        ))}
+        <div className="container">
+        <div className="row">
+          {this.state.cities.map(city => (
+            <CityCard
+              id={city.id}
+              key={city.id}
+              image={city.image}
+            />
+          ))}
+        </div>
+        </div>
+        
+        
       </Wrapper>
     );
   }

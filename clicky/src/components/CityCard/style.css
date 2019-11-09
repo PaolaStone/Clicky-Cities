@@ -30,16 +30,16 @@
 }
 
 .middle {
-  
-  font-size: xxx-large;
+  text-align: center;
+  font-size: xx-large;
 }
 .score {
-  /* float: right; */
-  text-align: right;
+  float: right;
+  
   font-size: xx-large;
 }
 
 .left {
-  
-  font-size: xxx-large;
+  font-weight: bold;
+  font-size: xx-large;
 }
