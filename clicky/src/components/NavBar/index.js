@@ -9,7 +9,7 @@ function NavBar() {
           <a className="navbar-brand left" href="#">Clicky Cities  </a>
         </div>
         <div className="col col-med-4">
-        <a className="navbar-brand middle">Click an image to begin!</a>
+        <a className="navbar-brand middle"></a>
         </div>
         <div className="col col-med-4">
           <a className="navbar-brand score">Score:</a>

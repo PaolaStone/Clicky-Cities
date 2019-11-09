@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CityCard from "./components/CityCard";
 import Wrapper from "./components/Wrapper";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Title from "./components/Title";
 import cities from "./cities.json";
 
@@ -28,7 +29,8 @@ class App extends Component {
         </div>
         </div>
         
-        
+      <Footer/>
+      
       </Wrapper>
     );
   }

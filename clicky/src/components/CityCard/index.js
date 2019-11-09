@@ -5,21 +5,17 @@ import "./style.css";
 
 function CityCard(props) {
   return (
-    
-      
-        <div className="col col-md-3">
-        <button className="btn">
-          <div className="img-container">
-            <img src={props.image} />
-          </div>
-        </button>
+    <div className="col col-md-3">
+      <button className="btn" onClick = {() => {alert("clicked")}}>
+        <div className="img-container">
+          <img src={props.image} />
         </div>
-    
-    
+      </button>
+    </div>
+   
    
     
 );
 }
-
 
 export default CityCard;
