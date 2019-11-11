@@ -21,16 +21,16 @@ class App extends Component {
   handleClicked = id => {
     const cities = this.state.cities;
     const clickedCity = cities.filter(city => city.id === id );
-      console.log ("clicked once before if")
-      console.log("clickedCity  " + clickedCity[0].id)
+      // console.log ("clicked once before if")
+      // console.log("clickedCity  " + clickedCity[0].id)
       if(clickedCity[0].clicked) {
-        console.log ("clicked twice  clickedCity" + clickedCity)
+        // console.log ("clicked twice  clickedCity" + clickedCity)
         score = 0;
+        alert("This is the end! Remember, each image can be clicked just once")
 
         for (let i = 0; i<cities.length; i++) {
           cities[i].clicked = false;
-          console.log (cities)
-
+          // console.log (cities)
         }
         this.setState({score});
         this.setState({cities})
@@ -38,26 +38,56 @@ class App extends Component {
     } else {
       clickedCity[0].clicked = true
       score = score + 1;
+      if (score > bestRun) {
+        bestRun = score;
+        this.setState({bestRun})
+      }
+
+      cities.sort(function(a, b){return 0.5 - Math.random()})
+      
+      this.setState({cities});
+      this.setState({score})
             
+    //   function shuffleCities(){
+    //     data => {
+    //       let i = cities.length - 1;
+    //       while (i > 0) {
+    //         const j = Math.floor(Math.random() * (i + 1));
+    //         const temp = data[i];
+    //         data[i] = data[j];
+    //         data[j] = temp;
+    //         i--;
+    //       }
+    //       return data;
+    //     } 
+    // };
+        
     }
 
   }
   render() {
     return (
       <Wrapper>
-        <NavBar/>
-        <Title/>
+        <NavBar>
+          Best run: {this.state.bestRun}
+          <br>
+          </br>
+          Score: {this.state.score}  
+        </NavBar>
+        <Title>
+          Clicky Game!
+        </Title>
         <div className="container">
-        <div className="row">
-          {this.state.cities.map(city => (
-            <CityCard
-              handleClicked={this.handleClicked}
-              id={city.id}
-              key={city.id}
-              image={city.image}
-            />
-          ))}
-        </div>
+          <div className="row">
+            {this.state.cities.map(city => (
+              <CityCard
+                handleClicked={this.handleClicked}
+                id={city.id}
+                key={city.id}
+                image={city.image}
+              />
+            ))}
+          </div>
         </div>
         
       <Footer/>
