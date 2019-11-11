@@ -42,12 +42,29 @@ class App extends Component {
         bestRun = score;
         this.setState({bestRun})
       }
-
+      
+      if (score === 12) {
+        alert("You did it, congratulations!");
+        score = 0;
+        for (let i = 0; i<cities.length; i++) {
+          cities[i].clicked = false;
+         
+        }
+      }
       cities.sort(function(a, b){return 0.5 - Math.random()})
       
       this.setState({cities});
-      this.setState({score})
-            
+      this.setState({score});
+
+      if (score === 12) {
+        alert("You did it, congratulations!");
+        score = 0;
+        for (let i = 0; i<cities.length; i++) {
+          cities[i].clicked = false;
+         
+        }
+      }
+
     //   function shuffleCities(){
     //     data => {
     //       let i = cities.length - 1;
